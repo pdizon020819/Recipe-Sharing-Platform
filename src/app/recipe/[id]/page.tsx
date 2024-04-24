@@ -6,7 +6,6 @@ async function getRecipe(mealId: string) {
 
 export default async function RecipePage({ params }: any) {
   const recipe = await getRecipe(params.id);
-
   return (
     <div>
       <div>
