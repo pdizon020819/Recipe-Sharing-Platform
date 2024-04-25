@@ -6,7 +6,7 @@ export default function Header() {
         //     This is header
         // </div>
         <nav>
-            <ul><Link href="/">Home</Link></ul>
+            <ul><Link href="/">Homer Simpsonskjgh</Link></ul>
             <ul><Link href="/recipe">Recipes</Link></ul>
         </nav>
     )
