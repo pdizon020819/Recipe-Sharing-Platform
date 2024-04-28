@@ -28,11 +28,11 @@ async function getMultipleRandomMeals(count: number) {
 
 
 export default async function RecipesPage() {
-  const meals = await getMultipleRandomMeals(2);
+  const meals = await getMultipleRandomMeals(10);
   return(
-    <div className='h-screen text-center relative'>
+    <div className='text-center relative'>
       <h1 className='text-lg font-bold'>Recipes from around the world</h1>
-      <div className=' columns-1 gap-5 p-10 md:columns-2 lg:columns-3'>
+      <div className='relative inline-block columns-1 gap-5 p-10 md:columns-2 lg:columns-3'>
         {meals?.map((recipe) => {
           return <Recipe_Card key={recipe.idMeal} recipe={recipe} />;
         })}
