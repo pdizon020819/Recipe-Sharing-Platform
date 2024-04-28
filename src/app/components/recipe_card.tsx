@@ -18,8 +18,8 @@ export default async function Recipe_Card({ recipe }: any) {
                     <div className="text-start absolute bottom-0 bg-black w-full opacity-80 p-5">
                         <h2 className="font-bold text-lg text-white">{strMeal}</h2>
                         <div className="flex flex-row">
-                            <p className="bg-green-500 rounded-full px-2 mr-2">{strCategory}</p>
-                            <p className="bg-yellow-500 rounded-full px-2">{strArea}</p>
+                            <p className="bg-green-500 rounded-full px-2 mr-2 hover:bg-green-900">{strCategory}</p>
+                            <p className="bg-yellow-500 rounded-full px-2 hover:bg-yellow-600">{strArea}</p>
                         </div>
                     </div>
                     
