@@ -2,12 +2,6 @@
 import { getRandomValues } from 'crypto';
 import Link from 'next/link';
 import Recipe_Card from '../components/recipe_card';
-// export const dynamic = 'auto',
-//   dynamicParams = true,
-//   revalidate = 0,
-//   fetchCache = 'auto',
-//   runtime = 'nodejs',
-//   preferredRegion = 'auto'
 
 
 async function getMultipleRandomMeals(count: number) {
@@ -28,11 +22,11 @@ async function getMultipleRandomMeals(count: number) {
 
 
 export default async function RecipesPage() {
-  const meals = await getMultipleRandomMeals(12);
+  const meals = await getMultipleRandomMeals(1);
   return(
     <div className='text-center relative pt-5'>
       <h1 className='text-xl font-bold'>Recipes from around the world</h1>
-      <div className='relative inline-block columns-1 gap-5 p-10 md:columns-2 lg:columns-3'>
+      <div className='relative inline-block columns-1 gap-10 p-10 md:columns-2 lg:columns-3'>
         {meals?.map((recipe) => {
           return <Recipe_Card key={recipe.idMeal} recipe={recipe} />;
         })}
