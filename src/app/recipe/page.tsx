@@ -1,6 +1,3 @@
-// import PocketBase from 'pocketbase';
-import { getRandomValues } from 'crypto';
-import Link from 'next/link';
 import Recipe_Card from '../components/recipe_card';
 
 
@@ -22,7 +19,7 @@ async function getMultipleRandomMeals(count: number) {
 
 
 export default async function RecipesPage() {
-  const meals = await getMultipleRandomMeals(1);
+  const meals = await getMultipleRandomMeals(15);
   return(
     <div className='text-center relative pt-5'>
       <h1 className='text-xl font-bold'>Recipes from around the world</h1>
