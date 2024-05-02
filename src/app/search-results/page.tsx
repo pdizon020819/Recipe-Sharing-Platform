@@ -1,16 +1,15 @@
-/* eslint-disable @next/next/no-img-element */
 import Recipe_Card from '@/app/components/recipe_card';
 
-async function getCategory(category: string) {
-    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+async function getSearch(search: string) {
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`);
     const data = await res.json();
     return data?.meals;
 }
 
 
 
-export default async function CategoryPage({ params }: any) {
-  const recipes = await getCategory(params.category);
+export default async function SearchResultsPage({ params }: any) {
+  const recipes = await getSearch(params.search);
   return(
     <div className='text-center relative pt-5'>
       <h1 className='text-xl font-bold'>{params.category}</h1>
