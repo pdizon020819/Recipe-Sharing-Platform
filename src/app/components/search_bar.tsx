@@ -1,35 +1,38 @@
-// import { FaSearch } from "react-icons/fa";
+'use client';
+import { FaSearch } from "react-icons/fa";
+import { useRouter } from 'next/navigation';
+import React, { useState, ChangeEvent, KeyboardEvent } from 'react';
 
-// export default function SearchBar() {
-//     const getInitialState = () => {
-//         return { input: '' };
-//       }
-    
-//     const handleChange = (e:string) =>{
-//         this.setState({ input: e.target.value });
-//       }
-    
-//     return (
-//         <div className="fixed bottom-14 right-10">
-//             <form className="" action="">
-//                 <input className="pl-4" type="text"  onChange={ this.handleChange } placeholder="Search" />
-//                 <label className="inline-block translate-y-3 text-2xl text-stone-100 rounded-full bg-test5 p-2">
-//                     <button onClick={this.handleClick}><FaSearch /></button>
-//                 </label>
-//             </form>
-//         </div>
-//     )
-// }
+const SearchBar = () => {
+    const [searchQuery, setSearchQuery] = useState('');
+    const router = useRouter();
 
-// function Search({ category }: any) {
-//     const { strCategory, strCategoryThumb  } = category || {};
-  
-//     return (
-//       <Link href={`/categories/${strCategory}`}>
-//         <div>
-//             <img src={strCategoryThumb} alt="" />
-//           <p>{strCategory}</p>
-//         </div>
-//       </Link>
-//     );
-//   }
+    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(event.target.value);
+    };
+
+    const handleSearch = () => {
+        if (searchQuery.trim() !== '') {
+            router.push(`/result?search=${searchQuery}`);
+        }
+    };
+
+    const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
+    };
+    
+    return (
+        <div className="fixed bottom-14 right-10">
+            <form className="" action="">
+                <input className="pl-4" type="text" value={searchQuery} onChange={handleInputChange} onKeyPress={handleKeyPress} placeholder="Search" />
+                <label className="inline-block translate-y-3 text-2xl text-stone-100 rounded-full bg-test5 p-2 cursor-pointer" onClick={handleSearch}>
+                    <FaSearch />
+                </label>
+            </form>
+        </div>
+    )
+}
+
+export default SearchBar;

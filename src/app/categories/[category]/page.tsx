@@ -11,6 +11,7 @@ async function getCategory(category: string) {
 
 export default async function CategoryPage({ params }: any) {
   const recipes = await getCategory(params.category);
+  console.log(params)
   return(
     <div className='text-center relative pt-5'>
       <h1 className='text-xl font-bold'>{params.category}</h1>
