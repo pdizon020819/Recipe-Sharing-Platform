@@ -14,11 +14,13 @@ const SearchBar = () => {
     const handleSearch = () => {
         if (searchQuery.trim() !== '') {
             router.push(`/result?search=${searchQuery}`);
+            setSearchQuery('')
         }
     };
 
     const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
+            event.preventDefault();
             handleSearch();
         }
     };

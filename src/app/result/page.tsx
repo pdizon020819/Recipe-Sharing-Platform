@@ -10,10 +10,9 @@ async function getSearch(search: string) {
 
 export default async function SearchResultsPage({ searchParams }: any) {
   const recipes = await getSearch(searchParams.search);
-  console.log(searchParams.search)
   return(
     <div className='text-center relative pt-5'>
-      <h1 className='text-xl font-bold'>Results for {searchParams.search}</h1>
+      <h1 className='text-xl font-bold'>Results for: <span className='text-test1'>{searchParams.search}</span></h1>
       <div className='relative inline-block columns-2 gap-10 p-10 lg:columns-3'>
         {recipes?.map((recipe:any) => {
           return <Recipe_Card key={recipe.mealId} recipe={recipe} />;
