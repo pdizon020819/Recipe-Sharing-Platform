@@ -14,7 +14,7 @@ export default async function CategoriesPage() {
   return(
     <div className='text-center relative pt-5'>
       <h1 className='text-xl font-bold'>Categories:</h1>
-      <div className='relative inline-block columns-2 gap-10 p-10 lg:columns-3'>
+      <div className='relative grid grid-cols-1 p-10 md:grid-cols-2 lg:grid-cols-3'>
         {categories?.map((category:any) => {
           return <Category key={category.strCategory} category={category} />;
         })}

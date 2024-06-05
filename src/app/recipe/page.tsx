@@ -23,7 +23,7 @@ export default async function RecipesPage() {
   return(
     <div className='text-center relative pt-5'>
       <h1 className='text-xl font-bold'>Recipes from around the world</h1>
-      <div className='relative inline-block columns-1 gap-10 p-10 md:columns-2 lg:columns-3'>
+      <div className='relative grid grid-cols-1 gap-10 p-10 md:grid-cols-2 lg:grid-cols-3'>
         {meals?.map((recipe) => {
           return <Recipe_Card key={recipe.idMeal} recipe={recipe} />;
         })}

@@ -15,7 +15,7 @@ export default async function CategoryPage({ params }: any) {
   return(
     <div className='text-center relative pt-5'>
       <h1 className='text-xl font-bold'>{params.category}</h1>
-      <div className='relative inline-block columns-2 gap-10 p-10 lg:columns-3'>
+      <div className='relative grid grid-cols-1 gap-5 p-5 md:grid-cols-2 lg:grid-cols-3'>
         {recipes?.map((recipe:any) => {
           return <Recipe_Card key={recipe.mealId} recipe={recipe} />;
         })}
