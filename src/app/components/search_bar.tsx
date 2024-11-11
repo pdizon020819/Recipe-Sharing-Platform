@@ -26,9 +26,9 @@ const SearchBar = () => {
     };
     
     return (
-        <div className="fixed bottom-14 right-10">
+        <div className="fixed bottom-5 right-2">
             <form className="" action="">
-                <input className="pl-4" type="text" value={searchQuery} onChange={handleInputChange} onKeyPress={handleKeyPress} placeholder="Search" />
+                <input className="pl-1" type="text" value={searchQuery} onChange={handleInputChange} onKeyPress={handleKeyPress} placeholder="Search" />
                 <label className="inline-block translate-y-3 text-2xl text-stone-100 rounded-full bg-test5 p-2 cursor-pointer" onClick={handleSearch}>
                     <FaSearch />
                 </label>

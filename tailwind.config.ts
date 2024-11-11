@@ -14,8 +14,7 @@ const config: Config = {
         test3: "#DBC8AC",
         test4: "#EDDBC0",
         test5: "#264E01",
-
-      }
+      },
     },
   },
   plugins: [],
