@@ -8,7 +8,6 @@ async function getCategories() {
 }
 
 
-
 export default async function CategoriesPage() {
   const categories = await getCategories();
   return(
@@ -23,7 +22,7 @@ export default async function CategoriesPage() {
   );
 }
 
-function Category({ category }: any) {
+export function Category({ category }: any) {
     const { strCategory, strCategoryThumb  } = category || {};
   
     return (
