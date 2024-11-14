@@ -1,0 +1,40 @@
+{
+    "reviews":
+    [
+        {
+            "id": 1,
+            "name": "Emma R.",
+            "occupation": "Graphic Designer",
+            "review": "Discovering The Recipe Room has revolutionized my cooking routine! The recipes are easy to follow yet incredibly flavorful. I've impressed my family and friends with dishes I never thought I could make. Highly recommend!",
+            "image": "https://picsum.photos/id/64/1080/900"
+        },
+        {
+            "id": 2,
+            "name": "Carlos M.",
+            "occupation": "Marketing Manager",
+            "review": "I’ve tried at least 10 recipes, and each one has turned out perfectly! The tips provided are super helpful, and the ingredient lists are spot-on. This site is a lifesaver for someone like me who loves good food but doesn’t always have hours to cook.",
+            "image": "https://picsum.photos/id/91/1080/900"
+        },
+        {
+            "id": 3,
+            "name": "Sophia L.",
+            "occupation": "Travel Blogger",
+            "review": "I've been exploring different cuisines thanks to this site. The flavors are so authentic, and I feel like I’m learning so much about cooking. The recipes are easy to follow and always delicious!",
+            "image": "https://picsum.photos/id/177/1080/900"
+        },
+        {
+            "id": 4,
+            "name": "Jordan T.",
+            "occupation": "Software Engineer",
+            "review": "As a new cook, I was a bit intimidated, but this site has made learning to cook so enjoyable. The layout is clean, and I love that I can save my favorite recipes for later. Five stars!",
+            "image": "https://picsum.photos/id/375/1080/900"
+        },
+        {
+            "id": 5,
+            "name": "Priya S.",
+            "occupation": "Nutritionist",
+            "review": "Hands down, my favorite recipe website. The variety is amazing, and there’s something for every craving. It’s a relief to have reliable, tested recipes. Thank you for making cooking exciting and stress-free!",
+            "image": "https://picsum.photos/id/633/1080/900"
+        }
+    ]
+}

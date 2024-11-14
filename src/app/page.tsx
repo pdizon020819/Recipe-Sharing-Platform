@@ -1,7 +1,8 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
+import React, { useEffect, useState, ReactDOM } from 'react';
 import { HiOutlineChevronDoubleDown } from "react-icons/hi2";
+import CategoryCarousel from "./components/CategoryCarousel"
+
 
 async function getCategories() {
   const res = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
@@ -11,18 +12,6 @@ async function getCategories() {
 
 // eslint-disable-next-line @next/next/no-async-client-component
 export default function Home() {
-  const [emblaRef] = useEmblaCarousel();
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    async function fetchCategories() {
-      const categoriesData = await getCategories();
-      setCategories(categoriesData);
-      console.log(categoriesData); // Now it will only log once after data is fetched
-    }
-    fetchCategories();
-  }, []); // Empty dependency array to ensure it runs only once
-
   return (
     <main>
       {/* main title */}
@@ -44,13 +33,11 @@ export default function Home() {
       </section>
       {/* categories section */}
       <section className="bg-test2">
-        <div className="embla" ref={emblaRef}>
-          <div className="embla__container">
-            <div className="embla__slide">Slide 1</div>
-            <div className="embla__slide">Slide 2</div>
-            <div className="embla__slide">Slide 3</div>
-          </div>
-        </div>
+        <CategoryCarousel></CategoryCarousel>
+      </section>
+      {/* reviews */}
+      <section>
+        <p>Cuisine Connoisseur Reviews</p>
       </section>
     </main>
   );
