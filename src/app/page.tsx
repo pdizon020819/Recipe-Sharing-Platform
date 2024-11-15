@@ -2,6 +2,7 @@
 import React, { useEffect, useState, ReactDOM } from 'react';
 import { HiOutlineChevronDoubleDown } from "react-icons/hi2";
 import CategoryCarousel from "./components/CategoryCarousel"
+import ReviewsCarousel from "./components/ReviewsCarousel"
 
 
 async function getCategories() {
@@ -38,6 +39,7 @@ export default function Home() {
       {/* reviews */}
       <section>
         <p>Cuisine Connoisseur Reviews</p>
+        <ReviewsCarousel/>
       </section>
     </main>
   );
