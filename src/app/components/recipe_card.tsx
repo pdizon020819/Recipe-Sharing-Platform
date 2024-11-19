@@ -18,7 +18,7 @@ export default async function Recipe_Card({ recipe }: any) {
                     <div className="text-start absolute bottom-0 w-full">
                         <div className="bg-black w-full h-20 opacity-75 p-4"></div>
                         <div className="absolute left-4 top-2">
-                            <p className="font-black text-lg text-white">{strMeal}</p>
+                            <p className="font-bold lg:text-lg text-white">{strMeal}</p>
                         </div>
                     </div>
                     

@@ -19,7 +19,7 @@ async function getMultipleRandomMeals(count: number) {
 
 
 export default async function RecipesPage() {
-  const meals = await getMultipleRandomMeals(15);
+  const meals = await getMultipleRandomMeals(10);
   return(
     <div className='text-center relative pt-5'>
       <h1 className='text-xl font-bold'>Recipes from around the world</h1>

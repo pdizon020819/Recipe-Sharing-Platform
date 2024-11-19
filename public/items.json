@@ -37,6 +37,34 @@
                 "review": "Hands down, my favorite recipe website. The variety is amazing, and there’s something for every craving. It’s a relief to have reliable, tested recipes. Thank you for making cooking exciting and stress-free!",
                 "image": "https://picsum.photos/id/633/1080/900"
             }
+        ],
+        "favorites": 
+        [
+            {
+                "idMeal": "53032",
+                "strMeal": "Tonkatsu pork",
+                "strMealThumb": "https://www.themealdb.com/images/media/meals/lwsnkl1604181187.jpg"
+            },
+            {
+                "idMeal": "53015",
+                "strMeal": 	"Krispy Kreme Donut",
+                "strMealThumb": "https://www.themealdb.com/images/media/meals/4i5cnx1587672171.jpg"
+            },
+            {
+                "idMeal": "52911",
+                "strMeal": "Summer Pistou",
+                "strMealThumb":	"https://www.themealdb.com/images/media/meals/rqtxvr1511792990.jpg"
+            },
+            {
+                "idMeal": "52905",
+                "strMeal": 	"Chocolate Souffle",
+                "strMealThumb":	"https://www.themealdb.com/images/media/meals/twspvx1511784937.jpg"
+            },
+            {
+                "idMeal": "53070",
+                "strMeal": "Beef Caldereta",
+                "strMealThumb": "https://www.themealdb.com/images/media/meals/41cxjh1683207682.jpg"
+            }
         ]
     }
 }

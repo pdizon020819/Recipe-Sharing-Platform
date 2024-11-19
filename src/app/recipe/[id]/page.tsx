@@ -23,7 +23,7 @@ export default async function RecipePage({ params }: any) {
   }
   return (
     <>
-      <div className="p-5">
+      <div className="py-5 md:p-5">
         <div className="flex flex-col lg:flex-row-reverse">
           <img
             src={recipe.strMealThumb}
@@ -35,16 +35,18 @@ export default async function RecipePage({ params }: any) {
               <h3 className="text-3xl font-black">{recipe.strMeal}</h3>
               <div className="flex flex-row">
                 <Link href={`/categories/${recipe.strCategory}`} className="bg-green-900 rounded-full px-2 mr-2 text-white hover:bg-green-500">{recipe.strCategory}</Link>
-                <h5 className="bg-yellow-700 rounded-full px-2 text-white hover:bg-yellow-500">{recipe.strArea}</h5>
+                {/* <h5 className="bg-yellow-700 rounded-full px-2 text-white hover:bg-yellow-500">{recipe.strArea}</h5> */}
+                <Link href={`/area/${recipe.strArea}`} className="bg-green-900 rounded-full px-2 mr-2 text-white hover:bg-green-500">{recipe.strArea}</Link>
               </div>
             </div>
-            <div className='mx-auto px-20 columns-1 gap-5 p-10 md:columns-2'>
+            <div className='mx-auto py-10 columns-1 gap-5 md:p-10 md:columns-2 lg:px-20 '>
               <ul>
                 {ingredients.map((item, index) => (
                   <li className="mb-2" key={index}>{item.measure} {item.ingredient}</li>
                 ))}
               </ul>
             </div>
+            <p className='text-lg text-bold text-test2'>Direction:</p>
             <p 
             dangerouslySetInnerHTML={{ __html: instructionsWithLineBreaks }}
             className="mx-auto"
