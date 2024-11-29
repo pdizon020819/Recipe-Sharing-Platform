@@ -1,9 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useEffect, useState, ReactDOM } from "react";
 import { HiOutlineChevronDoubleDown } from "react-icons/hi2";
 import CategoryCarousel from "./components/CategoryCarousel";
 import ReviewsCarousel from "./components/ReviewsCarousel";
 import FavoriteRecipes from "./components/FavoriteRecipes";
+// import CookingSVG  from "../../public/cooking-stew-svgrepo-com.svg";
 
 async function getCategories() {
   const res = await fetch(
@@ -34,10 +36,10 @@ export default function Home() {
           </p>
         </div>
       </section>
-      {/* CTA */}
+      {/* Intro */}
       <section className="h-full bg-test4">
-        <div className="text-start py-14 px-4">
-          <p className="text-lg">
+        <div className="text-start py-14 px-4 md:px-14 lg:px-44 lg:py-24">
+          <p className="text-lg lg:text-xl">
             Welcome to{" "}
             <span className="text-test2 font-bold">The Recipe Room</span>! Your
             go-to destination for delicious and easy-to-follow recipes. Whether
@@ -51,16 +53,18 @@ export default function Home() {
       {/* categories section */}
       <section className="bg-test2">
         <div>
-          <h1 className="text-test4 font-bold text-center block p-3">
+          <h1 className="text-test4 font-bold text-center block p-3 md:text-2xl">
             Categories
           </h1>
         </div>
-        <CategoryCarousel></CategoryCarousel>
+        <div className="md:px-24 lg:px-44">
+          <CategoryCarousel></CategoryCarousel>
+        </div>
       </section>
       {/* favorites */}
       <section className="bg-test4">
-        <div>
-          <div className="text-start py-14 px-4">
+        <div className="md:grid md:grid-cols-12">
+          <div className="text-start py-14 px-4 md:px-14 md:my-auto md:col-span-6 lg:col-span-7 lg:px-24 lg:text-lg">
             <p className="font-bold text-lg text-test2">
               Explore Our Handpicked Selection of Featured Recipes
             </p>
@@ -69,14 +73,19 @@ export default function Home() {
               inspiration for every palate.
             </p>
           </div>
-          <FavoriteRecipes />
+          <div className="md:col-span-6 lg:col-span-5">
+            <FavoriteRecipes />
+          </div>
         </div>
       </section>
       {/* reviews */}
-      <section className="bg-test2">
-        <p className="text-test4 block font-bold text-center p-3">Cuisine Connoisseur Reviews</p>
+      <section className="bg-test2 md:p-14 lg:p-24">
+        <p className="text-test4 block font-bold text-center p-3 md:text-2xl">
+          Cuisine Connoisseur Reviews
+        </p>
         <ReviewsCarousel />
       </section>
     </main>
+    
   );
 }

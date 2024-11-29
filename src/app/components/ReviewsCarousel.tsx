@@ -23,7 +23,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
                 <div className="text-test4 p-2">
                   <h2>{item.name}</h2>
                   <p className="text-sm opacity-80">{item.occupation}</p>
-                  <p className="pb-8 pt-2 px-7 text-start">{item.review}</p>
+                  <p className="pb-8 pt-2 px-7 text-start md:text-lg md:px-14">{item.review}</p>
                 </div>
               </div>
             ))}

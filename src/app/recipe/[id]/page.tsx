@@ -28,7 +28,7 @@ export default async function RecipePage({ params }: any) {
           <img
             src={recipe.strMealThumb}
             alt={recipe.strMeal}
-            className="size-full px-10 basis-1/4 mx-auto md:size-1/2"
+            className="size-full px-10 basis-1/4 mx-auto md:size-1/2 lg:px-0"
           />
           <div className="basis-2/3 p-5">
             <div>
@@ -36,7 +36,7 @@ export default async function RecipePage({ params }: any) {
               <div className="flex flex-row">
                 <Link href={`/categories/${recipe.strCategory}`} className="bg-green-900 rounded-full px-2 mr-2 text-white hover:bg-green-500">{recipe.strCategory}</Link>
                 {/* <h5 className="bg-yellow-700 rounded-full px-2 text-white hover:bg-yellow-500">{recipe.strArea}</h5> */}
-                <Link href={`/area/${recipe.strArea}`} className="bg-green-900 rounded-full px-2 mr-2 text-white hover:bg-green-500">{recipe.strArea}</Link>
+                <Link href={`/area/${recipe.strArea}`} className="bg-yellow-800 rounded-full px-2 mr-2 text-white hover:bg-yellow-500">{recipe.strArea}</Link>
               </div>
             </div>
             <div className='mx-auto py-10 columns-1 gap-5 md:p-10 md:columns-2 lg:px-20 '>

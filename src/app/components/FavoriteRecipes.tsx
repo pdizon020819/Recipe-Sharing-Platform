@@ -14,14 +14,15 @@ import Link from "next/link";
             infiniteLoop={true}
             dynamicHeight={false}
             className=""
+            thumbWidth={0}
+            showThumbs={false}
+            swipeable={true}
           >
             {favorites.map((item) => (
               <Link key={item.idMeal} href={`/recipe/${item.idMeal}`} >
                 <div >
                   <img src={item.strMealThumb} alt="slides" />
-                </div>
-                <div className="">
-                  <p>{item.strMeal}</p>
+                  <p className="legend">{item.strMeal}</p>
                 </div>
               </Link>
             ))}
