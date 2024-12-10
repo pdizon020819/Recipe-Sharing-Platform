@@ -22,13 +22,13 @@ export default async function CategoriesPage() {
   );
 }
 
-export function Category({ category }: any) {
+function Category({ category }: any) {
     const { strCategory, strCategoryThumb  } = category || {};
   
     return (
-      <Link href={`/categories/${strCategory}`}>
+      <Link className='inline-block' href={`/categories/${strCategory}`}>
         <div>
-            <img src={strCategoryThumb} alt="" />
+            <img className='mx-auto' src={strCategoryThumb} alt="" />
           <p>{strCategory}</p>
         </div>
       </Link>
