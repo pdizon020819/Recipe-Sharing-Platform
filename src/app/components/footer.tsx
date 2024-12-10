@@ -1,11 +1,12 @@
 import { FaMeta } from "react-icons/fa6";
 import { FaTwitter, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+import { MdFoodBank } from "react-icons/md";
 
 export default function Footer() {
   return (
     <div className="bg-test1 py-14 w-full text-white text-center px-5 md:px-10 lg:px-20">
-      <div className="text-start pb-4 mx-auto grid grid-cols-3 gap-5 md:grid-cols-5">
-        <div>logo</div>
+      <div className="text-start pb-4 mx-auto grid grid-cols-3 gap-5 md:grid-cols-5 items-center">
+        <div className="text-center"><a className="text-5xl hover:text-test3 inline-block" href="#"><MdFoodBank/></a></div>
         <div>
           <a className="text-lg hover:text-test3" href="#">
             Recipes
